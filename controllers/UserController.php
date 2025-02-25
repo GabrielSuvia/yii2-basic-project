@@ -17,6 +17,7 @@ class UserController extends Controller
     public function actionIndex()
     {
         $users = $this->userService->getAllUsers();
-        return $this->render('index', ['users' => $users]);
+        echo $users;
+        return $users;
     }
 }

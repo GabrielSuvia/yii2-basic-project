@@ -7,7 +7,7 @@ class UserRepository
 {
     public function findAll()
     {
-        $user = new User();
+        $user = "hello world";
         return $user;
     }
 }
