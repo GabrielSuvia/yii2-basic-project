@@ -3,22 +3,28 @@
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
-$config = [
-    'id' => 'basic',
+$config =[
+    'id' => 'backend-api',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'aliases' => [
-        '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
-    ],
     'components' => [
+        'request' => [
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ],
+        ],
+        'response' => [
+            'format' => yii\web\Response::FORMAT_JSON,
+            'charset' => 'UTF-8',
+        ],
+    ],
     'urlManager' => [
-        'enablePrettyUrl' => true,
-        'showScriptName' => false,
-        'rules' => [],
+    'enablePrettyUrl' => true,
+    'showScriptName' => false,
+    'rules' => [
+        ['class' => 'yii\rest\UrlRule', 'controller' => 'user'],
     ],
 ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {

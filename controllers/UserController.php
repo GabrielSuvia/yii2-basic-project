@@ -1,10 +1,11 @@
 <?php
 namespace app\controllers;
 
-use yii\web\Controller;
+use yii\rest\ActiveController;
+use yii\web\Response;
 use app\service\UserService;
 
-class UserController extends Controller
+class UserController extends ActiveController
 {
     private $userService;
 
@@ -14,10 +15,35 @@ class UserController extends Controller
         parent::__construct($id, $module, $config);
     }
 
-    public function actionIndex()
+
+     // Esta función maneja los comportamientos como la respuesta JSON y autenticación
+     public function behaviors()
+     {
+         $behaviors = parent::behaviors();
+ 
+         // Configuración de CORS, si deseas permitir solicitudes de diferentes dominios
+         $behaviors['corsFilter'] = [
+             'class' => \yii\filters\Cors::class,
+         ];
+ 
+         // Autenticación usando el esquema Bearer Token
+         $behaviors['authenticator'] = [
+             'class' => HttpBearerAuth::class,
+         ];
+ 
+         // Comportamiento para que las respuestas sean siempre en formato JSON
+         $behaviors['contentNegotiator']['formats']['text/html'] = Response::FORMAT_JSON;
+         
+         return $behaviors;
+     }
+ 
+
+    public function actionGetAllUsers()
     {
         $users = $this->userService->getAllUsers();
-        echo $users;
-        return $users;
+        return [
+            'status'=> 'succes',
+            'body' => $users
+        ];
     }
 }
