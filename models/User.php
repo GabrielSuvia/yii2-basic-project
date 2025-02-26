@@ -13,7 +13,7 @@ class User
     ];
     public static function getAll()
     {
-        echo "Ejecutando User Model";
+        error_log("Ejecutando User Model in console");
         return self::$users;
     }
 }

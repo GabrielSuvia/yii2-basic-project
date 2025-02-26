@@ -7,7 +7,7 @@ class UserRepository
 {
     public function findAll()
     {
-        $user = "hello world";
+        $user = User::getAll();
         return $user;
     }
 }
