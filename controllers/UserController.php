@@ -24,4 +24,20 @@ class UserController extends Controller
 
         return $userString;
     }
+
+    public function actionCreateUser()
+    {
+
+        $request = Yii::$app->request;
+        $bodyParams = $request->bodyParams;
+       // if(!$bodyParams){
+        //    error_log("3.1");
+        //  return ['error'=> 'data undefined'];
+       // }
+       // error_log("4");
+       
+        $userString = $this->userService->createUserService($bodyParams);
+
+        return $userString;
+    }
 }

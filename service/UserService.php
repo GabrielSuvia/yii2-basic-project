@@ -16,4 +16,9 @@ class UserService
     {
         return $this->userRepository->findAll();
     }
+
+    public function createUserService($bodyParams)
+    {   var_dump($bodyParams);
+        return $this->userRepository->createUserRepository($bodyParams);
+    }
 }

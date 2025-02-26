@@ -16,7 +16,9 @@ $config =[
         'request' => [
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
+                
             ],
+            'cookieValidationKey' => '1234567890qwertyuiopasdfghjklzxcvbnm'
         ],
         'response' => [
             'format' => yii\web\Response::FORMAT_JSON,
@@ -27,6 +29,7 @@ $config =[
             'showScriptName' => false,
             'rules' => [
                 'user' => 'user/get-all-users',
+                'user/create' => 'user/create-user'
             ],
         ],
     ],

@@ -5,15 +5,23 @@ namespace app\models;
 
 class User
 {
-    //usuario harcodeado
-    private static $users = [
-        1 => ['id' => 1, 'username' => 'usuario1', 'email' => 'usuario1@example.com'],
-        2 => ['id' => 2, 'username' => 'usuario2', 'email' => 'usuario2@example.com'],
-        
-    ];
+   
+    public $id;
+    public $name;
+    public $email;
+    public $password;
+   
+    public function __construct($id, $name, $email, $password)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
+        $this->password = $password;
+    }
+
     public static function getAll()
     {
-        error_log("Ejecutando User Model in console");
-        return self::$users;
+       
+        return [new User("1","gabriel","gabo123@hotmail.com","355040")];
     }
 }
