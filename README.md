@@ -18,10 +18,11 @@ Ejecuta los siguientes comandos en la terminal:
 -git clone https://github.com/GabrielSuvia/yii2-basic-project  
 
 ## Instalar dependencia
-  ```bash
-
+ 
   -composer install
 
+## Levantar servidor 
+  
   -php yii serve
 
 ## NOTA
