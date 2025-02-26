@@ -8,10 +8,11 @@
 
 # Instrucciones para configurar el proyecto
 
-## Clonar el repositorio  
+
 Ejecuta los siguientes comandos en la terminal:
 
-```bash
+```bash  
+
 -cd Repositorio  
   
 -git clone https://github.com/GabrielSuvia/yii2-basic-project  
