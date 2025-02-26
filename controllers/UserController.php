@@ -2,14 +2,17 @@
 namespace app\controllers;
 
 //use yii\rest\ActiveController;
-use yii\web\Response;
-use \yii\web\Controller;
+//use yii\web\Response;
+use Yii;
+use yii\web\Controller;
 use app\service\UserService;
 use app\models\User;
+//use yii\web\Request;
 
 class UserController extends Controller
 {
    //public $modelClass = 'app\models\User'; 
+   public $enableCsrfValidation = false;
     private $userService;
 
    public function __construct($id, $module, UserService $userService, $config = [])
@@ -27,8 +30,8 @@ class UserController extends Controller
 
     public function actionCreateUser()
     {
-
         $request = Yii::$app->request;
+
         $bodyParams = $request->bodyParams;
        // if(!$bodyParams){
         //    error_log("3.1");

@@ -18,7 +18,7 @@ $config =[
                 'application/json' => 'yii\web\JsonParser',
                 
             ],
-            'cookieValidationKey' => '1234567890qwertyuiopasdfghjklzxcvbnm'
+            'cookieValidationKey' => '1234567890qwertyuiopasdfghjklzxcvbnm',
         ],
         'response' => [
             'format' => yii\web\Response::FORMAT_JSON,
