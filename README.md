@@ -6,19 +6,27 @@
     <br>
 </p>
 
-##CLONAR REPOSITORIO
-  in bash:
-  -cd Repositorio
+# Instrucciones para configurar el proyecto
 
-  -git clone https://github.com/GabrielSuvia/yii2-basic-project
-##INSTALAR DEPENDENCIAS
-  in bash:
+## Clonar el repositorio  
+Ejecuta los siguientes comandos en la terminal:
+
+```bash
+-cd Repositorio  
+  
+-git clone https://github.com/GabrielSuvia/yii2-basic-project  
+
+## Instalar dependencia
+  ```bash
 
   -composer install
 
   -php yii serve
 
-##NOTA
-   -rutas disponibles para probrar:  
-                 *http//:localhost:8080/user   (metodo-GET) -> retorna todos los usuarios 
-                 *http//:user/create   (metodo-POST) -> crea los usuarios y retorna
+## NOTA
+   -rutas disponibles para probrar:    
+                 *http//:localhost:8080/user     
+                 (metodo-GET) -> retorna todos los usuarios    
+                       
+                 *http//:user/create     
+                 (metodo-POST) -> crea los usuarios y retorna    
