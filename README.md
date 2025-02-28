@@ -30,5 +30,5 @@ Ejecuta los siguientes comandos en la terminal:
                  *http//:localhost:8080/user     
                  (metodo-GET) -> retorna todos los usuarios    
                        
-                 *http//:user/create     
+                 *http//::localhost:8080/user/create     
                  (metodo-POST) -> crea los usuarios y retorna    
