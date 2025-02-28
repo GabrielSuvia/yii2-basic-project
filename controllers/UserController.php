@@ -11,7 +11,6 @@ use app\models\User;
 
 class UserController extends Controller
 {
-   //public $modelClass = 'app\models\User'; 
    public $enableCsrfValidation = false;//security desactived
     private $userService;
 

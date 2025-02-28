@@ -18,7 +18,7 @@ class UserService
     }
 
     public function createUserService($bodyParams)
-    {   var_dump($bodyParams);
+    { 
         return $this->userRepository->createUserRepository($bodyParams);
     }
 }

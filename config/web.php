@@ -2,12 +2,15 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$dotenv = \Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
 
 $config =[
     'id' => 'backend-api',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'db' => $db,
         'user' => [//tableName
         'class' => 'yii\web\User',
         'identityClass' => 'app\models\User', // Asegúrate de que este sea el namespace correcto para tu modelo de usuario

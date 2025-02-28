@@ -1,27 +1,13 @@
 <?php
 namespace app\models;
 
-//use yii\db\ActiveRecord;// para obtener funcionalidad de la db
+use yii\db\ActiveRecord;// para obtener funcionalidad de la db
 
-class User
+class User extends ActiveRecord
 {
    
-    public $id;
-    public $name;
-    public $email;
-    public $password;
-   
-    public function __construct($id, $name, $email, $password)
+    public static function tableName()
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->email = $email;
-        $this->password = $password;
-    }
-
-    public static function getAll()
-    {
-       
-        return [new User("1","gabriel","gabo123@hotmail.com","355040")];
+        return 'user'; // Nombre exacto de la tabla en la BD
     }
 }
