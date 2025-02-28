@@ -20,7 +20,7 @@ Ejecuta los siguientes comandos en la terminal:
 
 ##DB MySql  
 
--cambiar credencialesd e la db
+-cambiar credencialesd de la db
 
 ## Instalar dependencia
  
