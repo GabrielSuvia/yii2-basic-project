@@ -15,7 +15,12 @@ Ejecuta los siguientes comandos en la terminal:
 
 -cd Repositorio  
   
--git clone https://github.com/GabrielSuvia/yii2-basic-project  
+-git clone https://github.com/GabrielSuvia/yii2-basic-project 
+
+
+##DB MySql  
+
+-cambiar credencialesd e la db
 
 ## Instalar dependencia
  
